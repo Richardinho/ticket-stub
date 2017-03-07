@@ -1,0 +1,162 @@
+body {
+    background : black;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'merchant-copy';
+  src: url('/merchant-copy.ttf'); /* IE9 Compat Modes */
+  src: url('/merchant-copy-wide.ttf'); /* IE9 Compat Modes */
+  src: url('/merchant-double-size.ttf'); /* IE9 Compat Modes */
+}
+
+.ticket-stub {
+    --border-color : #ff8100;
+    --width : 25em;
+    --ratio : calc(5.4 / 8.4);
+    width : var(--width);
+    padding-top : calc(var(--width) * var(--ratio));
+    display : inline-block;
+    position : relative;
+    background : white;
+    clip-path : url(#ticket-outline);
+
+
+}
+.british-rail-logo {
+    position : absolute;
+    bottom : .5em;
+    left : 1.5em;
+    width : 2em;;
+    z-index : 1;
+}
+
+.ticket-stub-container {
+    z-index : 0;
+    background : transparent;
+    padding : 0 2em 0 .3em;
+    position : absolute;
+    font-family : merchant-copy;
+    top : 0;
+    left : 0;
+    right : 0;
+    bottom : 0;
+    border-top : solid 2.4em var(--border-color);
+    border-bottom : solid 2.4em var(--border-color);
+}
+
+.ticket-stub-row {
+    display : flex;
+    justify-content : space-between;
+    clear : both;
+    margin-bottom : .5em;
+}
+
+.ticket-stub-key {
+    font-size : .5em;
+    line-height : 2.36;
+}
+.ticket-stub-value {
+    font-size : .85em;
+    line-height : 1.6;
+}
+
+.ticket-stub-class {
+    font-weight : bold;
+    width : 12%;
+}
+.ticket-stub-type {
+    width : 48%;
+}
+.ticket-stub-adult {
+    width : 12%;
+}
+.ticket-stub-child {
+    width : 12%;
+}
+.ticket-stub-direction {
+    width : 12%;
+    text-align : right;
+}
+.ticket-stub-start-date {
+    width : 52%;
+    text-align : right;
+}
+
+.ticket-stub-number {
+    width : 38%;
+}
+
+.ticket-stub-from {
+    width : 40%;
+}
+.ticket-stub-valid-until {
+    width : 25%;
+}
+.ticket-stub-price {
+    width : 12%;
+}
+.ticket-stub-to {
+    width : 40%;
+}
+.ticket-stub-route {
+    width : 25%;
+}
+
+.ticket-stub-validity {
+    width : 25%;
+}
+
+
+/*
+    set font size of ticket stub values to medium size
+*/
+.ticket-stub-start-date  .ticket-stub-value,
+.ticket-stub-number      .ticket-stub-value,
+.ticket-stub-from        .ticket-stub-value,
+.ticket-stub-valid-until .ticket-stub-value,
+.ticket-stub-valid-price .ticket-stub-value,
+.ticket-stub-to          .ticket-stub-value,
+.ticket-stub-route       .ticket-stub-value,
+.ticket-stub-validity    .ticket-stub-value
+{
+    font-size : .76em;
+}
+
+.ticket-stub-route       .ticket-stub-value span,
+.ticket-stub-validity    .ticket-stub-value span {
+    font-size : .6em;
+}
+
+.ticket-stub-start-date,
+.ticket-stub-from,
+.ticket-stub-to  {
+    clear : left;
+}
+
+.alpha {
+    font-size : 14px;
+}
+.beta {
+    font-size : 8px;
+}
+.gamma {
+    font-size : 4px;
+}
+
+.ticket-stub-background {
+  position  :absolute;
+  top : 0; left : 0; bottom : 0; right : 0;
+  z-index : -1;
+  font-size : .45em;
+  overflow : hidden;
+  word-break: break-all;
+  color : #C4EF8C;
+  font-family : helvetica;
+}

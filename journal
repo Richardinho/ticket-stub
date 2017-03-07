@@ -1,0 +1,35 @@
+What I learned from copying a railway ticket on the web
+
+A shortwhile ago I had a brief correspondence with Chris Coyier when I tweeted that I thought it would be a fun idea to recreate toothpaste tube labels and railway tickets in html/css. He responsded by tweeting 'ooh nice'. Encouraged by these kind words I finally sat down to actually do it. This article describes my journey.
+
+
+Here's the actual ticket itself: a standard issue National Rail ticket which I've had kicking around my flat for several years. 
+
+The challenge was to recreate in html and css this ticket as faithfully as possible: colors, fonts, layouts, the shape, and also the torn edge at the top just for good measure. Part of the interest for me on embarking on this project is to find out the extent to which this is possible. Clearly the tear presents an interesting problem to solve, and I expect getting the fonts correct also will be.
+
+
+The first step is to work out the different components which make up the ticket.
+
+1. the printed text with source, destination , price etc.
+Have to find the font, the color of the text, and create the layout.
+2. background text. the cryptic 'Rail Settlement Plan' repeated across the background to create a greenish background to the main text.
+3. orange margins
+4. National Rail icon
+5. outline of ticket
+6. outline of tear
+
+
+I decided to start with the background text since it seemed fairly straightforward to do: WRONG!!
+In actual fact there were a few hidden subtleties. Firstly I had to work out the font. If at all possible I wanted to discover the actual font used on the ticket since this strikes me as a useful skill to have for a web developer.
+
+There are several sites which promise to be able to recognise a font from photograph. Unfortunately the background font is so faint that none of these tools were able to even recognise it as text let alone which font it was.
+I went through Google fonts but was unable to find match.
+Lastly, I simply did a search on 'What font is used for National Rail tickets' and immediately found a forum with this very question answered.
+
+In fact it turns out that this font is called 'Railway alphabet' and is the font commonly used in railway signage across the country as well as in hospitals and airports. I loved thiskind of titbit. Some people are obsessed with the subculture surrounding typography and I can see why.
+
+http://thestationmaster.files.wordpress.com/2013/06/island-liner.jpeg
+
+
+But where do I get Railway alphabet from?
+Google fonts didn't have it not suprisingly since I couldn't find it previously, but you can buy it from various places. Unfortunately, it's not cheap at £100 just for Black regular not including bold or italic! I'm afraid that's a bit outside my budget. If this was a professional job, I guess I would have to bite the bullet but finding alternatives is also part of the job. It turns out that RA is pretty similar to Helvetica which is avaliable on most computers so I decide that it will do the job. 

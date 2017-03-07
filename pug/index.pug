@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset='utf-8')
+		title Ticket Stub
+		link(rel='stylesheet', href='css/main.css')
+	body
+		include ./outline.html
+		- var fontSize = 'alpha'
+		include ./ticket-stub.pug
+		br
+		- var fontSize = 'beta'
+		include ./ticket-stub.pug
+		br
+		- var fontSize = 'gamma'
+		include ./ticket-stub.pug
+		script(src='main.js')
